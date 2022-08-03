@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './App.css';
+import Countdown from './Components/Countdown/Countdown';
+import moment from 'moment';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+class App extends Component { 
+  //Set Default launch date on first load
+  setLaunchDate(launch){
+    const dateFormat = moment(launch).format('yyyy-MM-DD')
+    const [year, month, day] = dateFormat.split('-');
+    const defaultDate = new Date(year, month - 1, day, 0,0,0);
+    //Add 14 days
+    defaultDate.setDate(defaultDate.getDay()+14);
+    return defaultDate;
+  }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  render(){
+    return(
+    <div className="App">
+      <h1>WE'RE LAUNCHING SOON</h1>
+      <Countdown
+      CountdownTime={this.setLaunchDate(new Date())}/>
+    </div>
+    );
+  }
+}
+
+  // ========================================
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(
+    <React.StrictMode>
+      <div className='stars'></div>
+      <div className='mountains'></div>
+      <App />
+    </React.StrictMode>
+  );
