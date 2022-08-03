@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Here](https://murray122.github.io/react-tic-tac-toe-app/)
+- Solution URL: [Here](https://murray122.github.io/launch-countdown-timer-react/)
 
 ## My Process
 
