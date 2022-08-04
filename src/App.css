@@ -18,11 +18,12 @@ main{
 
 .App {
   display: flex;
-  flex-direction: column;
   text-align: center;
-  margin: 6rem auto;
-  padding: 1rem;
-  z-index: 2;
+  margin-bottom: 15rem;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 h1{

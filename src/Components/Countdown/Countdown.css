@@ -14,6 +14,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 0.5rem;
     color: white;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .countdown-timer{
@@ -71,9 +72,31 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-transform: uppercase;
 }
 
+@media (max-width:375px) {
+    h1{
+        margin-bottom: 2.5rem;
+        letter-spacing: 9px;
+        font-size: 22px;
+    }
+    .countdown-timer{
+        justify-content: space-around;
+    }
+    .numbers{
+        padding: 0;
+        width: 3rem;
+        height: 3rem;
+        font-size: 22px;
+    }
+    .numbers-label{
+        letter-spacing: 1px;
+        font-size: 10px;
+    }
+    
+}
+
 @media (min-width:780px) {
     h1{
-        margin-bottom: 3.5rem;
+        margin-bottom: 2.5rem;
         letter-spacing: 9px;
         font-size: 22px;
     }

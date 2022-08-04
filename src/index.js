@@ -31,7 +31,7 @@ class App extends Component {
   root.render(
     <React.StrictMode>
       <div className='stars'></div>
-      <div className='mountains'></div>
       <App />
+      <div className='mountains'></div>
     </React.StrictMode>
   );
