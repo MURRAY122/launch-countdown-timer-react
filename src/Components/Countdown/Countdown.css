@@ -18,10 +18,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .countdown-timer{
-
-    font-family: "Oswald";
-
     display: flex;
+    gap: 1rem;
     justify-content: space-around;
 }
 
@@ -67,6 +65,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .numbers-label{
+    margin: 1rem;
     color: hsl(237, 18%, 59%);
     letter-spacing: 0;
     text-transform: uppercase;
@@ -114,15 +113,3 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     
 }
-
-/* ### Primary
-
-- Grayish blue: hsl(237, 18%, 59%)
-- Soft red: hsl(345, 95%, 68%)
-
-### Neutral
-
-- White: hsl(0, 0%, 100%)
-- Dark desaturated blue: hsl(236, 21%, 26%)
-- Very dark blue: hsl(235, 16%, 14%)
-- Very dark (mostly black) blue: hsl(234, 17%, 12%) */

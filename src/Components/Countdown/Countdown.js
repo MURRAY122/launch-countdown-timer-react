@@ -28,20 +28,20 @@ function Countdown(props) {
         <input title='Select Date' className='date-btn' type="Date" onChange={(e) => {setCountdownTime(new Date(e.target.value))}}></input>
         <div className='countdown-timer'>
             <div className='countdown-number'>
-            <span className='numbers'><div className='card-up'></div><div className='card-down'></div><div className='card-number'>{remainingTime.days}</div></span>
-            <span className='numbers-label'>Days</span>
+            <div className='numbers'><div className='card-up'></div><div className='card-down'></div><div className='card-number'>{remainingTime.days}</div></div>
+            <div className='numbers-label'>Days</div>
             </div>
             <div className='countdown-number'>
-            <span className='numbers'><div className='card-up'></div><div className='card-down'></div><div className='card-number'>{remainingTime.hours}</div></span>
-            <span className='numbers-label'>Hours</span>
+            <div className='numbers'><div className='card-up'></div><div className='card-down'></div><div className='card-number'>{remainingTime.hours}</div></div>
+            <div className='numbers-label'>Hours</div>
             </div>
             <div className='countdown-number'>
-            <span className='numbers'><div className='card-up'></div><div className='card-down'></div><div className='card-number'>{remainingTime.minutes}</div></span>
-            <span className='numbers-label'>minutes</span>
+            <div className='numbers'><div className='card-up'></div><div className='card-down'></div><div className='card-number'>{remainingTime.minutes}</div></div>
+            <div className='numbers-label'>minutes</div>
             </div>
             <div className='countdown-number'>
-            <span className='numbers'><div className='card-up'></div><div className='card-down'></div><div className='card-number'>{remainingTime.seconds}</div></span>
-            <span className='numbers-label'>seconds</span>
+            <div className='numbers'><div className='card-up'></div><div className='card-down'></div><div className='card-number'>{remainingTime.seconds}</div></div>
+            <div className='numbers-label'>seconds</div>
             </div>
         </div>
         </div>
