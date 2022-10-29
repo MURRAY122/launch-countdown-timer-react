@@ -1,8 +1,14 @@
 import dayjs from "dayjs";
+var utc = require('dayjs/plugin/utc')
+var timezone = require('dayjs/plugin/timezone') // dependent on utc plugin
+dayjs.extend(utc);
+
+const tz = "America/New_York"
 
 export function getRemainingTime(timestampMs){
     const timestampDayjs = dayjs(timestampMs);
     const nowDayjs = dayjs();
+
     if(timestampDayjs.isBefore(nowDayjs)){
         return {
             seconds : "00",

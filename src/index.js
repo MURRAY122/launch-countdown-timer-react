@@ -2,16 +2,12 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import './App.css';
 import Countdown from './Components/Countdown/Countdown';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 class App extends Component { 
   //Set Default launch date on first load
   setLaunchDate(launch){
-    const dateFormat = moment(launch).format('yyyy-MM-DD')
-    const [year, month, day] = dateFormat.split('-');
-    const defaultDate = new Date(year, month - 1, day, 0,0,0);
-    //Add 14 days
-    defaultDate.setDate(defaultDate.getDay()+14);
+    const defaultDate = launch.set('hour', 0).set('minute', 0).set('second', 0).set('date', launch.get('date')+2);
     return defaultDate;
   }
 
@@ -20,7 +16,7 @@ class App extends Component {
     <div className="App">
       <h1>WE'RE LAUNCHING SOON</h1>
       <Countdown
-      CountdownTime={this.setLaunchDate(new Date())}/>
+      CountdownTime={this.setLaunchDate(dayjs())}/>
     </div>
     );
   }

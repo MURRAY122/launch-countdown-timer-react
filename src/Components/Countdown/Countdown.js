@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import { useState, useEffect } from 'react'; 
 import './Countdown.css';
 import {getRemainingTime} from './Utils/CountdownUtils';
@@ -25,7 +26,7 @@ function Countdown(props) {
 
     return(
         <div>
-        <input title='Select Date' className='date-btn' type="Date" onChange={(e) => {setCountdownTime(new Date(e.target.value))}}></input>
+        <input title='Select Date' className='date-btn' type="Date" onChange={(e) => {setCountdownTime(dayjs(e.target.value))}}></input>
         <div className='countdown-timer'>
             <div className='countdown-number'>
             <div className='numbers'><div className='card-up'></div><div className='card-down'></div><div className='card-number'>{remainingTime.days}</div></div>
